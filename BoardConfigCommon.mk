@@ -97,13 +97,14 @@ TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oplus
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_BOOTCONFIG:= \
+    androidboot.selinux=permissive \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
+#BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
